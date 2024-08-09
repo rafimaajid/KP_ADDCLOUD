@@ -48,7 +48,6 @@
                             </div></div>
                     </div>
 
-
                     <table class="table-auto w-full mt-4">
                         <thead class="bg-gray-100 h-8">
                             <tr>

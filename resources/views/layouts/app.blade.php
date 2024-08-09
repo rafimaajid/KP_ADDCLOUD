@@ -31,6 +31,7 @@
             <a href="{{ url('/home') }}" class="{{ request()->is('home') ? 'active' : '' }}">Home</a>
             <a href="{{ url('/products') }}" class="{{ request()->is('products') ? 'active' : '' }}">Product</a>
             <a href="{{ url('/article') }}" class="{{ request()->is('article') ? 'active' : '' }}">Article</a>
+            <a href="{{ url('/tutorial') }}" class="{{ request()->is('tutorial') ? 'active' : '' }}">Tutorial</a>
             <a href="{{ url('/contact') }}" class="{{ request()->is('contact') ? 'active' : '' }}">Contact</a>
             <a href="{{ url('/login') }}" class="{{ request()->is('contact') ? 'active' : '' }}">Login</a>
         </div>
