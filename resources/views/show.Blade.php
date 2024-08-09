@@ -11,6 +11,7 @@
     <img src="{{ asset('assets/img/availability.png') }}" alt="High Availability">
 </div>
 
+
 <div class="product-header">
     <div class="product-title">
         <h1>{{ $detailProduct->name }}</h1>
@@ -21,12 +22,14 @@
     </div>
 </div>
 
+
 <div class="product-navigation">
     <ul>
         <li><a href="#features">Features</a></li>
         <li><a href="{{ route('specs', $detailProduct->id) }}">Specs</a></li>
     </ul>
 </div>
+
 
 <div class="features-section">
     <h2>Protect your data at all times</h2>
@@ -51,6 +54,7 @@
         @endforeach
     </div>
 
+    
 </div>
 <div class="product-features">
     @foreach($description as $title => $feature)

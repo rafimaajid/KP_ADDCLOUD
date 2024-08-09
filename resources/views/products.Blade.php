@@ -3,6 +3,7 @@
 @section('title', 'Products')
 
 @section('content')
+
 <div class="catalog-section">
     @foreach($productsCategory as $category => $products)
     <div class="catalog-category">
