@@ -43,6 +43,14 @@ Route::get('/article', [ArticleController::class, 'index'])->name('article.index
 Route::get('/tech-category/{id}', [ArticleController::class, 'category'])->name('tech-category');
 Route::get('/tech-single/{id}', [ArticleController::class, 'single'])->name('tech-single');
 Route::get('/tech-author/{id}', [ArticleController::class, 'author'])->name('tech-author');
+Route::get('/tech-category/{id}', [ArticleController::class, 'category'])->name('tech-category');
+Route::get('/tech-single/{id}', [ArticleController::class, 'single'])->name('tech-single');
+Route::get('/tech-single1/{id}', [ArticleController::class, 'single1'])->name('tech-single1');
+Route::get('/tech-single2/{id}', [ArticleController::class, 'single2'])->name('tech-single2');
+Route::get('/tech-single3/{id}', [ArticleController::class, 'single3'])->name('tech-single3');
+Route::get('/tech-single4/{id}', [ArticleController::class, 'single4'])->name('tech-single4');
+Route::get('/tech-single5/{id}', [ArticleController::class, 'single5'])->name('tech-single5');
+Route::get('/tech-single6/{id}', [ArticleController::class, 'single6'])->name('tech-single6');
 //bagian video tutorial
 Route::get('/tutorial', TutorialController::class)->name('tutorial');
 //bagian cart

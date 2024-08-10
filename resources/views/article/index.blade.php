@@ -13,8 +13,8 @@
                         <div class="shadow-desc">
                             <div class="blog-meta">
                                 <span class="bg-orange"><a href="{{ route('tech-category', ['id' => 1]) }}" title="">Technology</a></span>
-                                <h4><a href="{{ route('tech-single', ['id' => 1]) }}" title="">Say hello to real handmade office furniture! Clean & beautiful design</a></h4>
-                                <small><a href="{{ route('tech-single', ['id' => 1]) }}" title="">24 July, 2017</a></small>
+                                <h4><a href="{{ route('tech-single1', ['id' => 1]) }}" title="">Kenali 5 Cara Mengatasi Hardisk Penuh dengan Tepat</a></h4>
+                                <small><a href="{{ route('tech-single1', ['id' => 1]) }}" title="">24 July, 2017</a></small>
                                 <small><a href="{{ route('tech-author', ['id' => 1]) }}" title="">by Amanda</a></small>
                             </div><!-- end meta -->
                         </div><!-- end shadow-desc -->
@@ -29,8 +29,8 @@
                         <div class="shadow-desc">
                             <div class="blog-meta">
                                 <span class="bg-orange"><a href="{{ route('tech-category', ['id' => 1]) }}" title="">Gadgets</a></span>
-                                <h4><a href="{{ route('tech-single', ['id' => 2]) }}" title="">Do not make mistakes when choosing web hosting</a></h4>
-                                <small><a href="{{ route('tech-single', ['id' => 2]) }}" title="">03 July, 2017</a></small>
+                                <h4><a href="{{ route('tech-single2', ['id' => 2]) }}" title="">Apa Saja Langkah-langkah untuk Mengatasi Hard Disk yang Penuh?</a></h4>
+                                <small><a href="{{ route('tech-single2', ['id' => 2]) }}" title="">03 July, 2017</a></small>
                                 <small><a href="{{ route('tech-author', ['id' => 2]) }}" title="">by Jessica</a></small>
                             </div><!-- end meta -->
                         </div><!-- end shadow-desc -->
@@ -45,8 +45,8 @@
                         <div class="shadow-desc">
                             <div class="blog-meta">
                                 <span class="bg-orange"><a href="{{ route('tech-category', ['id' => 1]) }}" title="">Technology</a></span>
-                                <h4><a href="{{ route('tech-single', ['id' => 3]) }}" title="">The most reliable Galaxy Note 8 images leaked</a></h4>
-                                <small><a href="{{ route('tech-single', ['id' => 3]) }}" title="">01 July, 2017</a></small>
+                                <h4><a href="{{ route('tech-single3', ['id' => 3]) }}" title="">Cara Atasi Memori Internal Smartphone Yang Penuh</a></h4>
+                                <small><a href="{{ route('tech-single3', ['id' => 3]) }}" title="">01 July, 2017</a></small>
                                 <small><a href="{{ route('tech-author', ['id' => 3]) }}" title="">by Jessica</a></small>
                             </div><!-- end meta -->
                         </div><!-- end shadow-desc -->
@@ -78,12 +78,12 @@
                             </div><!-- end col -->
 
                             <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="{{ route('tech-single', ['id' => 4]) }}" title="">Top 10 phone applications and 2017 mobile design awards</a></h4>
+                                <h4><a href="{{ route('tech-single4', ['id' => 4]) }}" title="">Data Tiba-tiba Hilang! Begini Cara Mencegah Kerusakan Data Pada Hard Disk</a></h4>
                                 <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
                                 <small class="firstsmall"><a class="bg-orange" href="{{ route('tech-category', ['id' => 1]) }}" title="">Gadgets</a></small>
-                                <small><a href="{{ route('tech-single', ['id' => 4]) }}" title="">21 July, 2017</a></small>
+                                <small><a href="{{ route('tech-single4', ['id' => 4]) }}" title="">21 July, 2017</a></small>
                                 <small><a href="{{ route('tech-author', ['id' => 4]) }}" title="">by Matilda</a></small>
-                                <small><a href="{{ route('tech-single', ['id' => 4]) }}" title=""><i class="fa fa-eye"></i> 1114</a></small>
+                                <small><a href="{{ route('tech-single4', ['id' => 4]) }}" title=""><i class="fa fa-eye"></i> 1114</a></small>
                             </div><!-- end meta -->
                         </div><!-- end blog-box -->
 
@@ -100,12 +100,12 @@
                             </div><!-- end col -->
 
                             <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="{{ route('tech-single', ['id' => 5]) }}" title="">A device you can use both headphones and usb</a></h4>
+                                <h4><a href="{{ route('tech-single5', ['id' => 5]) }}" title="">Bagaimana cara merawat harddisk?</a></h4>
                                 <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
                                 <small class="firstsmall"><a class="bg-orange" href="{{ route('tech-category', ['id' => 1]) }}" title="">Technology</a></small>
-                                <small><a href="{{ route('tech-single', ['id' => 5]) }}" title="">21 July, 2017</a></small>
+                                <small><a href="{{ route('tech-single5', ['id' => 5]) }}" title="">21 July, 2017</a></small>
                                 <small><a href="{{ route('tech-author', ['id' => 5]) }}" title="">by Matilda</a></small>
-                                <small><a href="{{ route('tech-single', ['id' => 5]) }}" title=""><i class="fa fa-eye"></i> 4412</a></small>
+                                <small><a href="{{ route('tech-single5', ['id' => 5]) }}" title=""><i class="fa fa-eye"></i> 4412</a></small>
                             </div><!-- end meta -->
                         </div><!-- end blog-box -->
 
@@ -134,12 +134,12 @@
                             </div><!-- end col -->
 
                             <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="{{ route('tech-single', ['id' => 6]) }}" title="">Applications for taking photos of nature in your mobile phones</a></h4>
+                                <h4><a href="{{ route('tech-single6', ['id' => 6]) }}" title="">Perbedaan Cloud dan Server Traditional</a></h4>
                                 <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
                                 <small class="firstsmall"><a class="bg-orange" href="{{ route('tech-category', ['id' => 1]) }}" title="">Gadgets</a></small>
-                                <small><a href="{{ route('tech-single', ['id' => 6]) }}" title="">20 July, 2017</a></small>
+                                <small><a href="{{ route('tech-single6', ['id' => 6]) }}" title="">20 July, 2017</a></small>
                                 <small><a href="{{ route('tech-author', ['id' => 6]) }}" title="">by Matilda</a></small>
-                                <small><a href="{{ route('tech-single', ['id' => 6]) }}" title=""><i class="fa fa-eye"></i> 2313</a></small>
+                                <small><a href="{{ route('tech-single6', ['id' => 6]) }}" title=""><i class="fa fa-eye"></i> 2313</a></small>
                             </div><!-- end meta -->
                         </div><!-- end blog-box -->
                     </div><!-- end blog-list -->
