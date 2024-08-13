@@ -76,7 +76,7 @@
     </footer>
     <div class="whatsapp-button">
         <a href="https://wa.me/6281818899989" target="_blank">
-            <img src="{{ asset('assets/img/logo_wa.jpg') }}" alt="WhatsApp" style="width: 30px; height: 30px;">
+            <img src="{{ asset('assets/img/logo_wa.png') }}" alt="WhatsApp" style="width: 30px; height: 30px;">
         </a>
     </div>
 

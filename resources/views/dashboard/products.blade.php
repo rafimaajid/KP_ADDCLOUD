@@ -10,12 +10,14 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
 
-                    <a href="/dashboard/products/add" class="bg-blue-500 text-white font-semibold py-1 inline-block rounded-sm px-3 hover:bg-blue-700">Add Product</a>
+                    <a href="/dashboard/products/add" class="bg-blue-500 text-white font-semibold py-1 inline-block rounded-sm px-3 hover:bg-blue-700 mb-4">Add Product</a>
+                    
                     @if (session('success'))
                         <div class="py-2 px-4 rounded-md bg-green-50 text-green-700 my-3">
                             {{ session('success') }}
                         </div>
                     @endif
+                    
                     <table class="table-auto w-full mt-4">
                         <thead>
                             <tr>
@@ -28,14 +30,15 @@
                         <tbody>
                             @foreach ($products as $product)
                                 <tr>
-                                    <td align="center"><img src="{{ asset('storage/'. $product->image) }}" alt="{{ $product->name }}" style="width: 50px; height: 50px; object-fit: contain;"></td>
+                                    <td align="center">
+                                        <img src="{{ asset('storage/'. $product->image) }}" alt="{{ $product->name }}" class="w-12 h-12 object-contain mx-auto">
+                                    </td>
                                     <td>{{ $product->name }}</td>
                                     <td>{{ $product->category }}</td>
                                     <td align="center">
-                                        <div class="d-flex">
-
-                                            <a href="/dashboard/products/{{ $product->id }}" class="bg-blue-500 text-white font-semibold py-1 inline-block rounded-sm px-3 hover:bg-blue-700">Detail</a>
-                                            <a href="/dashboard/products/{{ $product->id }}/edit" class="bg-green-500 text-white font-semibold py-1 inline-block rounded-sm px-3 hover:bg-green-700">Edit</a>
+                                        <div class="flex flex-col md:flex-row justify-center gap-2">
+                                            <a href="/dashboard/products/{{ $product->id }}" class="bg-blue-500 text-white font-semibold py-1 rounded-sm px-3 hover:bg-blue-700">Detail</a>
+                                            <a href="/dashboard/products/{{ $product->id }}/edit" class="bg-green-500 text-white font-semibold py-1 rounded-sm px-3 hover:bg-green-700">Edit</a>
                                             <form action="/dashboard/products/{{ $product->id }}" method="post" class="inline-block">
                                                 @csrf
                                                 @method('DELETE')
@@ -47,6 +50,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    
                 </div>
             </div>
         </div>

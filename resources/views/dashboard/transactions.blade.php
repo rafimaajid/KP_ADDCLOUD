@@ -14,38 +14,39 @@
                             {{ session('success') }}
                         </div>
                     @endif
-                    <table class="table-auto w-full mt-4">
-                        <thead class="bg-gray-100 h-8">
-                            <tr>
-                                <th>No</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Total Price</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            @foreach($transactions as $transaction)
+                    <div class="table-responsive">
+                        <table class="table-auto w-full mt-4">
+                            <thead class="bg-gray-100 h-8">
                                 <tr>
-                                    <td align="center">{{ $loop->iteration }}</td>
-                                    <td>{{ $transaction->name }}</td>
-                                    <td>{{ $transaction->email }}</td>
-                                    <td>Rp {{ number_format($transaction->total_price, 0, ',', '.') }}</td>
-                                    <td>{{ $transaction->status }}</td>
-                                    <td align="center">
-                                        <a href="/dashboard/transactions/{{ $transaction->id }}" class="bg-blue-500 text-white font-semibold py-1 inline-block rounded-sm px-3 hover:bg-blue-700">Detail</a>
-                                        <form action="/dashboard/transactions/{{ $transaction->id }}" method="post" class="inline-block">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="bg-red-500 text-white font-semibold py-1 rounded-sm px-3 hover:bg-red-700">Delete</button>
-                                        </form>
-                                    </td>
+                                    <th>No</th>
+                                    <th>Name</th>
+                                    <th class="hidden md:table-cell">Email</th>
+                                    <th>Total Price</th>
+                                    <th class="hidden md:table-cell">Status</th>
+                                    <th>Action</th>
                                 </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach($transactions as $transaction)
+                                    <tr>
+                                        <td align="center">{{ $loop->iteration }}</td>
+                                        <td>{{ $transaction->name }}</td>
+                                        <td class="hidden md:table-cell">{{ $transaction->email }}</td>
+                                        <td>Rp {{ number_format($transaction->total_price, 0, ',', '.') }}</td>
+                                        <td class="hidden md:table-cell">{{ $transaction->status }}</td>
+                                        <td align="center">
+                                            <a href="/dashboard/transactions/{{ $transaction->id }}" class="bg-blue-500 text-white font-semibold py-1 px-2 inline-block rounded-sm hover:bg-blue-700">Detail</a>
+                                            <button form="delete-{{ $transaction->id }}" class="bg-red-500 text-white font-semibold py-1 px-2 inline-block rounded-sm hover:bg-red-700">Delete</button>
+                                            <form id="delete-{{ $transaction->id }}" action="/dashboard/transactions/{{ $transaction->id }}" method="post" class="hidden">
+                                                @csrf
+                                                @method('DELETE')
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

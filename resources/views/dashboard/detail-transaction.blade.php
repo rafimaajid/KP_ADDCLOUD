@@ -10,8 +10,9 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <h1 class="font-bold text-lg mb-4">Detail Transaction</h1>
-                    <div class="flex flex-row">
-                        <div class="w-1/3">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div>
                             <div class='mb-2'>
                                 <strong>Nama:</strong>
                                 <p>{{ $transaction->name }}</p>
@@ -23,8 +24,9 @@
                             <div class='mb-2'>
                                 <strong>Total Price:</strong>
                                 <p>Rp {{ number_format($transaction->total_price, 0, ',', '.') }}</p>
-                            </div></div>
-                        <div class="w-1/3">
+                            </div>
+                        </div>
+                        <div>
                             <div class='mb-2'>
                                 <strong>Status:</strong>
                                 <p>{{ $transaction->status }}</p>
@@ -36,8 +38,9 @@
                             <div class='mb-2'>
                                 <strong>Kota:</strong>
                                 <p>{{ $transaction->city }}</p>
-                            </div></div>
-                        <div class="w-1/3">
+                            </div>
+                        </div>
+                        <div>
                             <div class='mb-2'>
                                 <strong>No. Kontak:</strong>
                                 <p>{{ $transaction->contact }}</p>
@@ -45,7 +48,8 @@
                             <div class='mb-2'>
                                 <strong>Kurir:</strong>
                                 <p>{{ $transaction->courier->name }}</p>
-                            </div></div>
+                            </div>
+                        </div>
                     </div>
 
                     <table class="table-auto w-full mt-4">
