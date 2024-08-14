@@ -18,38 +18,40 @@
                         </div>
                     @endif
                     
-                    <table class="table-auto w-full mt-4">
-                        <thead>
-                            <tr>
-                                <th>Image</th>
-                                <th>Name</th>
-                                <th>Category</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($products as $product)
+                    <div class="overflow-x-auto">
+                        <table class="table-auto w-full mt-4">
+                            <thead>
                                 <tr>
-                                    <td align="center">
-                                        <img src="{{ asset('storage/'. $product->image) }}" alt="{{ $product->name }}" class="w-12 h-12 object-contain mx-auto">
-                                    </td>
-                                    <td>{{ $product->name }}</td>
-                                    <td>{{ $product->category }}</td>
-                                    <td align="center">
-                                        <div class="flex flex-col md:flex-row justify-center gap-2">
-                                            <a href="/dashboard/products/{{ $product->id }}" class="bg-blue-500 text-white font-semibold py-1 rounded-sm px-3 hover:bg-blue-700">Detail</a>
-                                            <a href="/dashboard/products/{{ $product->id }}/edit" class="bg-green-500 text-white font-semibold py-1 rounded-sm px-3 hover:bg-green-700">Edit</a>
-                                            <form action="/dashboard/products/{{ $product->id }}" method="post" class="inline-block">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="bg-red-500 text-white font-semibold py-1 rounded-sm px-3 hover:bg-red-700">Delete</button>
-                                            </form>
-                                        </div>
-                                    </td>
+                                    <th class="px-4 py-2">Image</th>
+                                    <th class="px-4 py-2">Name</th>
+                                    <th class="px-4 py-2">Category</th>
+                                    <th class="px-4 py-2">Action</th>
                                 </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach ($products as $product)
+                                    <tr class="border-b">
+                                        <td align="center" class="px-4 py-2">
+                                            <img src="{{ asset('storage/'. $product->image) }}" alt="{{ $product->name }}" class="w-12 h-12 object-contain mx-auto">
+                                        </td>
+                                        <td class="px-4 py-2">{{ $product->name }}</td>
+                                        <td class="px-4 py-2">{{ $product->category }}</td>
+                                        <td align="center" class="px-4 py-2">
+                                            <div class="flex flex-col md:flex-row justify-center gap-2">
+                                                <a href="/dashboard/products/{{ $product->id }}" class="bg-blue-500 text-white font-semibold py-1 rounded-sm px-3 hover:bg-blue-700">Detail</a>
+                                                <a href="/dashboard/products/{{ $product->id }}/edit" class="bg-green-500 text-white font-semibold py-1 rounded-sm px-3 hover:bg-green-700">Edit</a>
+                                                <form action="/dashboard/products/{{ $product->id }}" method="post" class="inline-block">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="bg-red-500 text-white font-semibold py-1 rounded-sm px-3 hover:bg-red-700">Delete</button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                     
                 </div>
             </div>

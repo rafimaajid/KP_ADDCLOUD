@@ -14,27 +14,27 @@
                             {{ session('success') }}
                         </div>
                     @endif
-                    <div class="table-responsive">
+                    <div class="overflow-x-auto">
                         <table class="table-auto w-full mt-4">
                             <thead class="bg-gray-100 h-8">
                                 <tr>
-                                    <th>No</th>
-                                    <th>Name</th>
-                                    <th class="hidden md:table-cell">Email</th>
-                                    <th>Total Price</th>
-                                    <th class="hidden md:table-cell">Status</th>
-                                    <th>Action</th>
+                                    <th class="px-4 py-2">No</th>
+                                    <th class="px-4 py-2">Name</th>
+                                    <th class="hidden md:table-cell px-4 py-2">Email</th>
+                                    <th class="px-4 py-2">Total Price</th>
+                                    <th class="hidden md:table-cell px-4 py-2">Status</th>
+                                    <th class="px-4 py-2">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($transactions as $transaction)
-                                    <tr>
-                                        <td align="center">{{ $loop->iteration }}</td>
-                                        <td>{{ $transaction->name }}</td>
-                                        <td class="hidden md:table-cell">{{ $transaction->email }}</td>
-                                        <td>Rp {{ number_format($transaction->total_price, 0, ',', '.') }}</td>
-                                        <td class="hidden md:table-cell">{{ $transaction->status }}</td>
-                                        <td align="center">
+                                    <tr class="border-b">
+                                        <td align="center" class="px-4 py-2">{{ $loop->iteration }}</td>
+                                        <td class="px-4 py-2">{{ $transaction->name }}</td>
+                                        <td class="hidden md:table-cell px-4 py-2">{{ $transaction->email }}</td>
+                                        <td class="px-4 py-2">Rp {{ number_format($transaction->total_price, 0, ',', '.') }}</td>
+                                        <td class="hidden md:table-cell px-4 py-2">{{ $transaction->status }}</td>
+                                        <td align="center" class="px-4 py-2">
                                             <a href="/dashboard/transactions/{{ $transaction->id }}" class="bg-blue-500 text-white font-semibold py-1 px-2 inline-block rounded-sm hover:bg-blue-700">Detail</a>
                                             <button form="delete-{{ $transaction->id }}" class="bg-red-500 text-white font-semibold py-1 px-2 inline-block rounded-sm hover:bg-red-700">Delete</button>
                                             <form id="delete-{{ $transaction->id }}" action="/dashboard/transactions/{{ $transaction->id }}" method="post" class="hidden">
