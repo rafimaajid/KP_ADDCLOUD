@@ -34,41 +34,6 @@
         </div>
         <button type="submit" class="btn btn-success">Add to Cart</button>
     </form>
-
-    {{-- <form action="{{ route('processPayment') }}" method="post">
-        @csrf
-        <input type="hidden" name="product_id" value="{{$product->id}}" />
-        <input type="hidden" name="total_price" value="{{$price}}" />
-        <div class="form-group">
-            <label for="name">Nama</label>
-            <input type="text" name="name" id="name" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label for="contact">No. Kontak</label>
-            <input type="text" name="contact" id="contact" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label for="city">Kota</label>
-            <input type="text" name="city" id="city" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label for="address">Alamat</label>
-            <textarea name="address" id="address" class="form-control" required></textarea>
-        </div>
-        <div class="form-group">
-            <label for="courier_id">Kurir</label>
-            <select id="courier_id" name="courier_id" style="padding: 6px;border-color: #777777;">
-                @foreach($couriers as $courier)
-                    <option value="{{ $courier->id }}">{{$courier->name}}</option>
-                @endforeach
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Proses ke Pembayaran</button>
-    </form> --}}
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
